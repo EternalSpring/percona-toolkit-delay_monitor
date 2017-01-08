@@ -1,11 +1,11 @@
 关闭：
-perl /opt/percona-toolkit-2.2.14/bin/pt-heartbeat --stop
+perl ..../percona-toolkit-2.2.14/bin/pt-heartbeat --stop
 
 启动PT：（更新时间为：秒）
 rm -rf /tmp/pt-heartbeat-sentinel
 
-启动主库定时更新：perl /opt/percona-toolkit-2.2.14/bin/pt-heartbeat -D ottermonitor --update -umon_user --ask-pass -P3301 -h --table heartbeatnm --interval=60 --daemonize
+启动主库定时更新：perl ..../percona-toolkit-2.2.14/bin/pt-heartbeat -D monitor --update -umon_user --ask-pass -P port -h --table heartbeatnm --interval=60 --daemonize
 密码:
 
 返回当前的时延（秒）：
-/opt/percona-toolkit-2.2.14/bin/pt-heartbeat -D ottermonitor --check -umon_user -p'mon_user1234' -P3301 -h  --table heartbeatnm --master-server-id 3301
+..../percona-toolkit-2.2.14/bin/pt-heartbeat -D ottermonitor --check -umon_user -p'mon_user1234' -P port -h  --table heartbeatnm --master-server-id port
